@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Box of Balls - Вход</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string>
+     QWidget {
+         background-color: #2e2e2e;
+         color: #ffffff;
+         font-family: 'Segoe UI', sans-serif;
+         font-size: 14px;
+     }
+     QListWidget {
+         background-color: #3c3c3c;
+         border: 1px solid #555555;
+     }
+     QPushButton {
+         background-color: #4a4a4a;
+         border: 1px solid #666666;
+         padding: 5px;
+         border-radius: 4px;
+     }
+     QPushButton:hover {
+         background-color: #5a5a5a;
+     }
+     QLabel#title_label {
+         font-size: 24px;
+         font-weight: bold;
+     }
+    </string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="title_label">
+      <property name="text">
+       <string>Box of Balls</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="project_list"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="button_layout">
+      <item>
+       <widget class="QPushButton" name="new_btn">
+        <property name="text">
+         <string>Создать новый проект</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="open_btn">
+        <property name="text">
+         <string>Открыть проект</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exit_btn">
+      <property name="text">
+       <string>Выход</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+
