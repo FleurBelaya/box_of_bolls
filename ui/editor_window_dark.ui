@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1057</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактор заставок</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+    QWidget { background-color: #222222; color: #CCCCCC; font-family: Segoe UI, Arial; font-size: 12px; }
+    QFrame { background-color: #2B2B2B; border: 1px solid #444444; }
+    QPushButton { background-color: #3C3C3C; border: 1px solid #555555; padding: 6px; }
+    QPushButton:hover { background-color: #505050; }
+    QLineEdit, QComboBox, QListWidget, QSpinBox, QDoubleSpinBox { background-color: #333333; border: 1px solid #555555; color: #FFFFFF; }
+    QLabel { color: #FFFFFF; }
+    QMenuBar { background-color: #2B2B2B; color: #FFFFFF; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="mainVBoxLayout">
+      <item>
+       <widget class="QFrame" name="canvasFrame">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>2</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string>background-color: #555555;</string>
+        </property>
+        <layout class="QVBoxLayout" name="canvasLayout">
+         <item>
+          <widget class="QFrame" name="topBar">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <layout class="QHBoxLayout" name="topBarLayout">
+            <item>
+             <layout class="QHBoxLayout" name="windowButtonsLayout">
+              <item>
+               <spacer name="spacerTopLeft">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnMaximize">
+                <property name="toolTip">
+                 <string>Развернуть</string>
+                </property>
+                <property name="text">
+                 <string>▢</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnMinimize">
+                <property name="toolTip">
+                 <string>Свернуть</string>
+                </property>
+                <property name="text">
+                 <string>–</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnClose">
+                <property name="toolTip">
+                 <string>Закрыть</string>
+                </property>
+                <property name="text">
+                 <string>✕</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="spacerCanvasCenter">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="settingsPanel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QVBoxLayout" name="settingsVBox">
+         <item>
+          <widget class="QLabel" name="labelSettingsTitle">
+           <property name="text">
+            <string>Настройки сцены</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="margin">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="settingsFormFrame">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <layout class="QFormLayout" name="formLayoutSettings">
+            <item row="0" column="0">
+             <widget class="QLabel" name="labelBackground">
+              <property name="text">
+               <string>Фон:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineBackground">
+              <property name="placeholderText">
+               <string>Выбрать файл...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="labelMusic">
+              <property name="text">
+               <string>Музыка:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineMusic">
+              <property name="placeholderText">
+               <string>Выбрать файл...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <spacer name="spacerRow2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="btnObjectEditor">
+              <property name="text">
+               <string>Редактор объектов</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="btnPreview">
+              <property name="font">
+               <font>
+                <family>Segoe UI,Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Просмотр</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <spacer name="spacerPreview1">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="spacerSettingsBottom">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1057</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile_2">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+    <addaction name="action_5"/>
+    <addaction name="action_6"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit_2">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="action_7"/>
+    <addaction name="action_8"/>
+   </widget>
+   <addaction name="menuFile_2"/>
+   <addaction name="menuEdit_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>Новый</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Открыть...</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Новый проект</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Открыть проект</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>Назад</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>Вперед</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

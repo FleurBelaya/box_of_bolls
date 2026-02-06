@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QMainWindow, QMessageBox
-from ui.main_window import Ui_LoginWindow
+
+from ui.py.main_window import Ui_LoginWindow
 
 
 class LoginWindow(QMainWindow):
