@@ -1,6 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication
-from resources.obj import LoginWindow
+from resources.obj import *
 
 app = QApplication(sys.argv)
 window = LoginWindow()
