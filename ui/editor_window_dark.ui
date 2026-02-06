@@ -41,62 +41,6 @@
         </property>
         <layout class="QVBoxLayout" name="canvasLayout">
          <item>
-          <widget class="QFrame" name="topBar">
-           <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <layout class="QHBoxLayout" name="topBarLayout">
-            <item>
-             <layout class="QHBoxLayout" name="windowButtonsLayout">
-              <item>
-               <spacer name="spacerTopLeft">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btnMaximize">
-                <property name="toolTip">
-                 <string>Развернуть</string>
-                </property>
-                <property name="text">
-                 <string>▢</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btnMinimize">
-                <property name="toolTip">
-                 <string>Свернуть</string>
-                </property>
-                <property name="text">
-                 <string>–</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btnClose">
-                <property name="toolTip">
-                 <string>Закрыть</string>
-                </property>
-                <property name="text">
-                 <string>✕</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
-         </item>
-         <item>
           <spacer name="spacerCanvasCenter">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
