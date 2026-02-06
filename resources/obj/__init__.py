@@ -1,1 +1,1 @@
-from login_window import *
+from .login_window import LoginWindow
