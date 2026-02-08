@@ -72,7 +72,7 @@ class Ui_LoginWindow:
             """
             /* Фон ТОЛЬКО для центрального виджета */
             QWidget#centralwidget {
-                background-image: url(C:/Users/polina/PycharmProjects/box_of_balls/resources/backgrounds/balls.png);
+                background-image: url(C:/Users/polina/PycharmProjects/box_of_balls/resources/sis_backgrounds/balls.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
